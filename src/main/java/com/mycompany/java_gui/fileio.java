@@ -19,6 +19,50 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class fileio {
+    
+    
+    void set_med_info(String name, String company, String exp_date, String cost)
+    {
+         try {
+            File obj = new File("med_info.txt");
+            if (obj.createNewFile()) {
+                System.out.println("File created");
+            } else {
+                System.out.println("File exists");
+            }
+
+            FileWriter writer = new FileWriter("med_info.txt", true);
+            writer.write(name + " /" + company + " /" + exp_date + " /" + cost  + "\n");
+            writer.close();
+            System.out.println("Successful written in the file");
+
+        } catch (IOException e) {
+            System.out.println("Error occured");
+            e.printStackTrace();
+        }
+        
+    }
+    void set_service_info(String facility, String cost)
+    {
+        try {
+            File obj = new File("service_info.txt");
+            if (obj.createNewFile()) {
+                System.out.println("File created");
+            } else {
+                System.out.println("File exists");
+            }
+
+            FileWriter writer = new FileWriter("service_info.txt", true);
+            writer.write(facility + " /" + cost  + "\n");
+            writer.close();
+            System.out.println("Successful written in the file");
+
+        } catch (IOException e) {
+            System.out.println("Error occured");
+            e.printStackTrace();
+        }
+        
+    }
 
     void set_doc_info(String ID, String Name, String Speacialist, String Education, String Time) {
         try {
@@ -56,13 +100,13 @@ public class fileio {
     }
 
     // to edit current file
-   void remove_line(int toRemove)  {
+   void remove_line(int toRemove, String filepath)  {
 
         try
         {
             toRemove = toRemove - 1;
 
-            String filepath = "doc_info.txt";
+//            String filepath = "doc_info.txt";
             File inputFile = new File(filepath);
             File tempFile = new File("myTempFile.txt");
 

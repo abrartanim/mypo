@@ -14,6 +14,6 @@ import java.util.Scanner;
 public class Java_gui {
 
     public static void main(String[] args) {
-        new login_GUI();
+        new Main();
     }
 }

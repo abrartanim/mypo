@@ -18,12 +18,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author abrar
  */
-public class display_data_doctor_GUI extends javax.swing.JFrame {
+public class display_data_service extends javax.swing.JFrame {
 
     /**
-     * Creates new form display_data_doctor_GUI
+     * Creates new form display_data_service
      */
-    public display_data_doctor_GUI() {
+    public display_data_service() {
         initComponents();
     }
 
@@ -36,86 +36,89 @@ public class display_data_doctor_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        table_doc = new javax.swing.JTable();
+        jPanel1 = new javax.swing.JPanel();
         import_btn = new javax.swing.JButton();
-        close_btn = new javax.swing.JButton();
-        close_btn1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table_doc = new javax.swing.JTable();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        table_doc.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Name", "Specialist", "Education", "Time"
-            }
-        ));
-        jScrollPane2.setViewportView(table_doc);
-
         import_btn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        import_btn.setText("Import Data");
+        import_btn.setText("IMPORT DATA");
         import_btn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 import_btnActionPerformed(evt);
             }
         });
 
-        close_btn.setText("Close");
-        close_btn.addActionListener(new java.awt.event.ActionListener() {
+        table_doc.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Facilities", "Cost"
+            }
+        ));
+        jScrollPane1.setViewportView(table_doc);
+
+        jButton2.setText("Delete");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                close_btnActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
-        close_btn1.setText("Delete");
-        close_btn1.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("Cancel");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                close_btn1ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(import_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(import_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(close_btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(close_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 30, Short.MAX_VALUE)
-                .addComponent(import_btn)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(import_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(close_btn)
-                    .addComponent(close_btn1))
-                .addGap(15, 15, 15))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(25, 25, 25))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(19, 19, 19))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -123,8 +126,7 @@ public class display_data_doctor_GUI extends javax.swing.JFrame {
 
     private void import_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_import_btnActionPerformed
         // TODO add your handling code here:
-        
-        String filepath = "doc_info.txt";
+        String filepath = "service_info.txt";
         File file = new File(filepath);
         
         try {
@@ -151,32 +153,25 @@ public class display_data_doctor_GUI extends javax.swing.JFrame {
         }
         
         import_btn.setEnabled(false);
-        
-        
-        
     }//GEN-LAST:event_import_btnActionPerformed
 
-    private void close_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_close_btnActionPerformed
-        // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_close_btnActionPerformed
-
-    private void close_btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_close_btn1ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         String userResponse;
         userResponse = JOptionPane.showInputDialog("Which line do you want to delete?");
         //System.out.println(userResponse);
         int del = Integer.parseInt(userResponse);
-        fileio obj = new fileio();
-        obj.remove_line(del, "doc_info.txt");
+        fileio temp = new fileio();
+        temp.remove_line(del, "service_info.txt");
         DefaultTableModel model = (DefaultTableModel)table_doc.getModel();
         model.setRowCount(0);
         import_btn.setEnabled(true);
-        
-        
-//        obj = null;
-//        System.gc();
-    }//GEN-LAST:event_close_btn1ActionPerformed
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,30 +190,30 @@ public class display_data_doctor_GUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(display_data_doctor_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(display_data_service.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(display_data_doctor_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(display_data_service.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(display_data_doctor_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(display_data_service.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(display_data_doctor_GUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(display_data_service.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new display_data_doctor_GUI().setVisible(true);
+                new display_data_service().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton close_btn;
-    private javax.swing.JButton close_btn1;
     private javax.swing.JButton import_btn;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable table_doc;
     // End of variables declaration//GEN-END:variables
 }

@@ -83,6 +83,11 @@ public class AdminUI_GUI extends javax.swing.JFrame {
         );
 
         jButton8.setText("ADD");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jButton9.setText("Show / Delete");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +118,11 @@ public class AdminUI_GUI extends javax.swing.JFrame {
         );
 
         jButton11.setText("ADD");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("Show / Delete");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -211,10 +221,14 @@ public class AdminUI_GUI extends javax.swing.JFrame {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
+        display_data_service obj = new display_data_service();
+        obj.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
+        display_med_service obj = new display_med_service();
+        obj.setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -222,6 +236,18 @@ public class AdminUI_GUI extends javax.swing.JFrame {
         Add_data_doctor_GUI obj = new Add_data_doctor_GUI();
         obj.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        Add_data_service_GUI obj = new Add_data_service_GUI();
+        obj.setVisible(true);
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        Add_data_med_GUI obj = new Add_data_med_GUI();
+        obj.setVisible(true);
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
