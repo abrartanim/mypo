@@ -42,6 +42,28 @@ public class fileio {
         }
         
     }
+    
+    void set_patient_info(String doc_name, String patient_name, String patient_phone)
+    {
+         try {
+            File obj = new File("patient_info.txt");
+            if (obj.createNewFile()) {
+                System.out.println("File created");
+            } else {
+                System.out.println("File exists");
+            }
+
+            FileWriter writer = new FileWriter("patient_info.txt", true);
+            writer.write("/" + patient_name + " /" + patient_phone + " /" + doc_name + "\n");
+            writer.close();
+            System.out.println("Successful written in the file");
+
+        } catch (IOException e) {
+            System.out.println("Error occured");
+            e.printStackTrace();
+        }
+        
+    }
     void set_service_info(String facility, String cost)
     {
         try {
@@ -143,5 +165,55 @@ public class fileio {
         {
             e.printStackTrace();
         }
+    }
+   
+   
+      String get_line(int toGet, String filepath)  {
+          String text = "";
+        try
+        {
+            toGet = toGet - 1;
+
+//            String filepath = "doc_info.txt";
+            File inputFile = new File(filepath);
+//            File tempFile = new File("myTempFile.txt");
+
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+            int line_count = 1;
+            //String lineToRemove = "bbb";
+            String currentLine;
+
+            for (int i = 0; i < toGet; i++) {
+//                writer.write(String.format("%s%n", reader.readLine()))
+                    reader.readLine();
+            }
+
+           text = reader.readLine();
+
+            String l;
+            while (null != (l = reader.readLine())) {
+//                writer.write(String.format("%s%n", l));
+                reader.readLine();
+            }
+//            System.out.println(text);
+
+//            writer.close();
+            reader.close();
+//            boolean successful = tempFile.renameTo(inputFile);
+//            System.out.println(successful);
+//            boolean heh = inputFile.delete();
+//            File dump = new File(filepath);
+//            tempFile.renameTo(dump);
+            //System.out.println(heh);
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return text;
+ 
     }
 }

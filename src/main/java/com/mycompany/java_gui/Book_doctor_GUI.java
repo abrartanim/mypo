@@ -8,8 +8,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -36,6 +42,9 @@ public class Book_doctor_GUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,21 +54,50 @@ public class Book_doctor_GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setText("Select a doctor: ");
+
+        jButton1.setText("Proceed");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Cancel");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(208, 208, 208)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(309, Short.MAX_VALUE))
+                .addGap(179, 179, 179)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addGap(133, 133, 133)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -79,6 +117,51 @@ public class Book_doctor_GUI extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Patient_entry hehe = new Patient_entry();
+        hehe.setDoctor_name(jComboBox1.getSelectedItem().toString());
+        Patient_info_GUI obj = new Patient_info_GUI(hehe);
+        obj.setVisible(true);
+        
+        String filepath = "doc_info.txt";
+        File file = new File(filepath);
+        
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            //DefaultTableModel model = (DefaultTableModel)table_doc.getModel();
+  
+            FileReader reader = new FileReader(file);
+            Scanner cin = new Scanner(file);
+            //String newline = "";
+            ArrayList arr = new ArrayList();
+            while (cin.hasNext())
+            {
+                
+                String Line = cin.nextLine();
+                String[] datarow = Line.split("/");
+                arr.add(datarow[2]);
+                //newline += " " + datarow[2];
+
+            }
+                       
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(display_data_doctor_GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(display_data_doctor_GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
         public void fillComboFromTxtFile(){
         
             jComboBox1.removeAll();
@@ -87,10 +170,32 @@ public class Book_doctor_GUI extends javax.swing.JFrame {
         
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
-            Object[] lines = br.lines().toArray();
+            //DefaultTableModel model = (DefaultTableModel)table_doc.getModel();
+  
+            FileReader reader = new FileReader(file);
+            Scanner cin = new Scanner(file);
+            //String newline = "";
+            ArrayList arr = new ArrayList();
+            while (cin.hasNext())
+            {
+                
+                String Line = cin.nextLine();
+                String[] datarow = Line.split("/");
+                arr.add(datarow[2]);
+                //newline += " " + datarow[2];
+
+            }
+                       
+            try {
+                br.close();
+            } catch (IOException ex) {
+                Logger.getLogger(display_data_doctor_GUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
+//            BufferedReader br = new BufferedReader(new FileReader(file));
+//            Object[] lines = br.lines().toArray();
             
-            for(int i = 0; i < lines.length; i++){
-                String line = lines[i].toString();
+            for(int i = 0; i < arr.size(); i++){
+                String line = arr.get(i).toString();
                 jComboBox1.addItem(line);
             }
             
@@ -135,7 +240,10 @@ public class Book_doctor_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
