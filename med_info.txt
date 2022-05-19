@@ -1,2 +1,10 @@
 Panadol /Saudi /2.10.22 /550
-Ace /Square /2.2.22 /300
+Napa /Square /5.10.23 /110
+Atova /Beximco /5.10.23 /300
+Angilock /Square /5.10.23 /300
+Montex /IBN Sina /9.10.23 /200
+Fenadin /Renata /9.10.23 /100
+Galvus /Novartis /9.11.23 /1000
+Amdocal /Beximco /9.11.23 /300
+Empa /JMI /9.11.23 /100
+Esolok /IBN Sina /9.11.23

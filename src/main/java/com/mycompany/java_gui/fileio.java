@@ -20,7 +20,27 @@ import java.util.Scanner;
 
 public class fileio {
     
-    
+    void set_records(String total_purchase, String date)
+    {
+        try {
+            File obj = new File("record_info.txt");
+            if (obj.createNewFile()) {
+                System.out.println("File created");
+            } else {
+                System.out.println("File exists");
+            }
+
+            FileWriter writer = new FileWriter("record_info.txt", true);
+            writer.write(total_purchase + " /" + date + "\n");
+            writer.close();
+            System.out.println("Successful written in the file");
+
+        } catch (IOException e) {
+            System.out.println("Error occured");
+            e.printStackTrace();
+        }
+        
+    }
     void set_med_info(String name, String company, String exp_date, String cost)
     {
          try {
@@ -54,7 +74,7 @@ public class fileio {
             }
 
             FileWriter writer = new FileWriter("patient_info.txt", true);
-            writer.write("/" + patient_name + " /" + patient_phone + " /" + doc_name + "\n");
+            writer.write( patient_name + " /" + patient_phone + " /" + doc_name + "\n");
             writer.close();
             System.out.println("Successful written in the file");
 

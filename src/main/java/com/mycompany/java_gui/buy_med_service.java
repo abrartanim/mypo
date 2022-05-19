@@ -225,9 +225,6 @@ public class buy_med_service extends javax.swing.JFrame {
         fileio temp = new fileio();
         String line = temp.get_line(del, "med_info.txt");
         String[] hue = line.split("/");
-        System.out.println(hue[0]);
-        System.out.println(hue[3]);
-        System.out.println(line);
         DefaultTableModel model = (DefaultTableModel)table_doc.getModel();
 //        model.setRowCount(0);
 //        import_btn.setEnabled(true);
@@ -244,13 +241,7 @@ public class buy_med_service extends javax.swing.JFrame {
         String[] hue = line.split("/");
         mycart.setItem(hue[0]);
         mycart.setCost(hue[3]);
-        
-//        System.out.println(mycart.getItem());
-        System.out.println(hue[3]);
-        System.out.println(line);
-//        DefaultTableModel model = (DefaultTableModel)table_doc.getModel();
-//        model.setRowCount(0);
-//        import_btn.setEnabled(true);
+ 
     }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:

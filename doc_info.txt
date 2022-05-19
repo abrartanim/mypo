@@ -1,4 +1,10 @@
-/245 /Abrar Tanim /Physician /MBBS /8-10 AM
-/245 /kfhdjskf /Physician /MBBS /8-10 AM
-/245 /djfhdsfdsf /Physician /MBBS /8-10 AM
-/245 /jdffndsfd /Physician /MBBS /8-10 AM
+1 /Dr. Bulbul Islam /Eye /FICS /10:00 AM
+2 /PROF.Dr. Mohsin Hossain /Cardiology /FCPS /10:00 AM
+3 /Dr. Mohammad Sarwar Alam /Cardiology /MBBS /3:00 PM
+4 /Dr.S.M.Ahsan Habib /Cardiology /MD /3:00 PM
+5 /Dr. Kamrun Nahar /Endocrinology /PGT /3:00 PM
+6 /Dr. Hurjahan Banu /Endocrinology /FCPS /5:00 PM
+7 /Dr. A.F.M Khalilur Rahman /Neurologist /Pgcm /10:00 PM
+8 /Dr. Rafiqul Bari /Respiratory /FCCP /11:00 AM
+9 /Dr. Shriful Alam /Oncology /FICS /12:00 PM
+10 /Dr. Abdur Rahim /Medicine /MD /9:00 AM

@@ -241,11 +241,8 @@ public class buy_data_service extends javax.swing.JFrame {
         fileio temp = new fileio();
         String line = temp.get_line(del, "service_info.txt");
         String[] hue = line.split("/");
-        System.out.println(hue[0]);
-        System.out.println(hue[1]);
         mycart.setItem(hue[0]);
         mycart.setCost(hue[1]);
-        System.out.println(line);
         DefaultTableModel model = (DefaultTableModel)table_doc.getModel();
 //        model.setRowCount(0);
 //        import_btn.setEnabled(true);

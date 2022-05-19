@@ -13,7 +13,8 @@ import javax.swing.table.DefaultTableModel;
  * @author abrar
  */
 public class Cart_GUI extends javax.swing.JFrame {
-
+    
+    public double total_cost;
     /**
      * Creates new form Cart_GUI
      */
@@ -208,7 +209,7 @@ public class Cart_GUI extends javax.swing.JFrame {
         jButton4.setText("Print");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton4ActionPerformed(evt, total_cost);
             }
         });
 
@@ -285,7 +286,7 @@ public class Cart_GUI extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt, Cart mycart) {                                         
         // TODO add your handling code here:
         Date thisdate = new Date();
-        double total_cost = 0;
+        total_cost = 0;
         String line = "";
         area.setText("\n****************************Receipt**************************\nDate: " + thisdate +"\n\n------------------------------------------------------------------------------------\nItem Name\t\tCost\n");
         for (int i = 0; i < mycart.getsize(); i++)
@@ -306,10 +307,20 @@ public class Cart_GUI extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Thank you for using our services!!!");
+        JOptionPane.showMessageDialog(this, "Thank you for using our services!!!");        
         dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt, double a) {                                         
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Thank you for using our services!!!");
+        Date thisdate = new Date();
+        fileio obj = new fileio();
+        String date = thisdate.toString();
+        String total_purchase = String.valueOf(a);
+        obj.set_records(total_purchase, date);
+        dispose();
+    }
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         area.setText("");

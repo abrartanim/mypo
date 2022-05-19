@@ -36,15 +36,22 @@ public class AdminUI_GUI extends javax.swing.JFrame {
         doc_panel = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         service_panel = new javax.swing.JPanel();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         medicine_panel = new javax.swing.JPanel();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -62,6 +69,8 @@ public class AdminUI_GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("Doctor");
+
         javax.swing.GroupLayout doc_panelLayout = new javax.swing.GroupLayout(doc_panel);
         doc_panel.setLayout(doc_panelLayout);
         doc_panelLayout.setHorizontalGroup(
@@ -71,15 +80,21 @@ public class AdminUI_GUI extends javax.swing.JFrame {
                 .addGroup(doc_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(doc_panelLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel5)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         doc_panelLayout.setVerticalGroup(
             doc_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(doc_panelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         jButton8.setText("ADD");
@@ -96,6 +111,8 @@ public class AdminUI_GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setText("Facilities");
+
         javax.swing.GroupLayout service_panelLayout = new javax.swing.GroupLayout(service_panel);
         service_panel.setLayout(service_panelLayout);
         service_panelLayout.setHorizontalGroup(
@@ -106,15 +123,21 @@ public class AdminUI_GUI extends javax.swing.JFrame {
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(service_panelLayout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         service_panelLayout.setVerticalGroup(
             service_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(service_panelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jButton11.setText("ADD");
@@ -131,6 +154,8 @@ public class AdminUI_GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setText("Medicines");
+
         javax.swing.GroupLayout medicine_panelLayout = new javax.swing.GroupLayout(medicine_panel);
         medicine_panel.setLayout(medicine_panelLayout);
         medicine_panelLayout.setHorizontalGroup(
@@ -141,11 +166,17 @@ public class AdminUI_GUI extends javax.swing.JFrame {
                     .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(medicine_panelLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         medicine_panelLayout.setVerticalGroup(
             medicine_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(medicine_panelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -158,6 +189,29 @@ public class AdminUI_GUI extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon("adminui_icons\\doc_ad.png"));
 
+        jButton1.setText("Back");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("Guest_GUI_pics\\icon.png"));
+
+        jButton2.setText("Patient Information");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Show Records");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -165,38 +219,67 @@ public class AdminUI_GUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(105, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(doc_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(service_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(medicine_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(59, 59, 59))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(doc_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(40, 40, 40))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(23, 23, 23)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(service_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)
+                                .addComponent(medicine_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(59, 59, 59))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(73, 73, 73))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73))))
+                        .addComponent(jButton3)
+                        .addGap(197, 197, 197))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(211, 211, 211)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(529, Short.MAX_VALUE)
+                    .addComponent(jButton2)
+                    .addGap(59, 59, 59)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(88, 88, 88)
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(doc_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(medicine_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(service_panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(doc_panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                    .addComponent(service_panel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3))
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(425, Short.MAX_VALUE)
+                    .addComponent(jButton2)
+                    .addContainerGap()))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -249,6 +332,22 @@ public class AdminUI_GUI extends javax.swing.JFrame {
         obj.setVisible(true);
     }//GEN-LAST:event_jButton11ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        new Main().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new display_data_patient_GUI().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new display_data_records_GUI().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -286,8 +385,11 @@ public class AdminUI_GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel doc_panel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
@@ -295,6 +397,10 @@ public class AdminUI_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel medicine_panel;
     private javax.swing.JPanel service_panel;

@@ -1,2 +1,10 @@
-xRAY /200
-fdfdfd /23232
+Intra Oral X-ray /160.00
+Abdominal Fluid AFB /300.00
+ABRIS /3000.00
+ACTH /950.00
+ACTH /950.00
+ALBUMIN /300.00
+Alcohol Test /1000.00
+ANA /1000.00
+Anti-HCV /1000.00
+Blood C/S /1000.00
